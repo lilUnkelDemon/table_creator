@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مستندات API</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; margin: 20px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; direction: ltr !important; }
+        code { color: #d63384; direction: ltr !important; }
+    </style>
+</head>
+<body>
+
+<h1>📌 مستندات API مدیریت جداول دیتابیس</h1>
+<p>این API امکان ایجاد، خواندن، ویرایش و حذف داده‌ها را در دیتابیس فراهم می‌کند.</p>
+
+<h2>⚙️ تنظیمات اولیه</h2>
+<p>ابتدا اطلاعات دیتابیس را در فایل <code>config.php</code> تنظیم کنید:</p>
+<pre><code>
+$host = "localhost";
+$dbname = "test_db";
+$username = "root";
+$password = "";
+</code></pre>
+
+<h2>🔗 نحوه استفاده از API</h2>
+
+<h3>📌 دریافت اطلاعات یک جدول</h3>
+<p><strong>متد:</strong> GET</p>
+<pre><code>http://yourdomain.com/api.php?action=select&table=users</code></pre>
+
+<h3>📌 افزودن داده جدید</h3>
+<p><strong>متد:</strong> POST</p>
+<pre><code>
+http://yourdomain.com/api.php?action=insert&table=users
+Content-Type: application/x-www-form-urlencoded
+
+name=Ali&email=ali@gmail.com
+</code></pre>
+
+<h3>📌 ویرایش داده موجود</h3>
+<p><strong>متد:</strong> PUT</p>
+<pre><code>
+http://yourdomain.com/api.php?action=update&table=users
+Content-Type: application/x-www-form-urlencoded
+
+id=1&name=Reza&email=reza@gmail.com
+</code></pre>
+
+<h3>📌 حذف داده</h3>
+<p><strong>متد:</strong> DELETE</p>
+<pre><code>http://yourdomain.com/api.php?action=delete&table=users&id=1</code></pre>
+
+<h2>🖥 تست API</h2>
+<p>برای تست API می‌توانید از ابزارهایی مانند <strong>Postman</strong>  استفاده کنید.</p>
+
+<h2>🛠 تکنولوژی‌های استفاده شده</h2>
+<ul>
+    <li><strong>PHP</strong> (با PDO برای امنیت بیشتر)</li>
+    <li><strong>MySQL</strong></li>
+    <li><strong>HTML, CSS, JavaScript</strong> (برای رابط کاربری)</li>
+</ul>
+
+
+</body>
+</html>
